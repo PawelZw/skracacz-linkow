@@ -1,6 +1,6 @@
 package com.example.linkshortener;
 
-import link.LinkService;
+import com.example.linkshortener.link.LinkService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ class LinkManagerController {
     @ResponseStatus(HttpStatus.CREATED)
     ResponseEntity<?> createLink(@RequestBody CreateLinkDto link) {
        try{
-           return ResponseEntity.ok().body(linkService.createLink(link.toDto()));
+           return ResponseEntity.created(null).body(linkService.createLink(link.toDto()));
 
        }catch (LinkAlreadyExistException e) {
            LOG.info(e.getMessage());
