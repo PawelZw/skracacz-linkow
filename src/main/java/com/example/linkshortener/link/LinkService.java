@@ -1,4 +1,4 @@
-package link;
+package com.example.linkshortener.link;
 
 import com.example.linkshortener.LinkDto;
 

@@ -1,9 +1,9 @@
 package link;
 
 import com.example.linkshortener.LinkDto;
+import com.example.linkshortener.link.LinkService;
+import com.example.linkshortener.link.LinkServiceImpl;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class LinkServiceImplTest {
 

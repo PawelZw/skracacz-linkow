@@ -1,10 +1,11 @@
-package link;
+package com.example.linkshortener.link;
 
 import com.example.linkshortener.LinkDto;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
-
+@Component
 public class LinkServiceImpl implements LinkService{
 
   final Map <String,LinkDto> repository = new HashMap<>();
