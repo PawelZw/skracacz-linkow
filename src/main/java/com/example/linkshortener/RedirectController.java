@@ -1,5 +1,6 @@
 package com.example.linkshortener;
 
+import link.LinkService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,11 @@ import java.io.IOException;
 @RequestMapping("/s")
 
 public class RedirectController {
+    private final LinkService linkService;
+
+    public RedirectController(LinkService linkService) {
+        this.linkService = linkService;
+    }
 
     @GetMapping("/{id}")
     public void redirectLink(
